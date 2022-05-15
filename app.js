@@ -23,3 +23,7 @@ function openForm() {
   document.getElementById("group-form").style.display = "flex";
 
 }
+
+function closeForm() {
+  document.getElementById("group-form").style.display = "none";
+}
