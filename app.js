@@ -1,3 +1,7 @@
+let myLibrary = [];
+
+
+
 function Books(title, author, pages, haveRead) {
   this.title = title;
   this.author = author;
@@ -14,3 +18,8 @@ const sailorMoon = new Books("Sailor Moon", "Billy Collins", 222, "not read yet"
 
 
 console.log(theHungerGames.info());
+
+function openForm() {
+  document.getElementById("group-form").style.display = "flex";
+
+}
