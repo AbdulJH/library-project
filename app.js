@@ -13,11 +13,18 @@ function Books(title, author, pages, haveRead) {
 }
 
 
-const theHungerGames = new Books("Hunger Games", "Suzanne Collins", 384, "not read yet");
-const sailorMoon = new Books("Sailor Moon", "Billy Collins", 222, "not read yet");
+// const theHungerGames = new Books("Hunger Games", "Suzanne Collins", 384, "not read yet");
+// const sailorMoon = new Books("Sailor Moon", "Billy Collins", 222, "not read yet");
 
 
-console.log(theHungerGames.info());
+// console.log(theHungerGames.info());
+
+function addBookToLibrary() {
+  let book = new Books(title, author, pages, haveRead)
+  myLibrary.push(book);
+
+
+}
 
 function openForm() {
   document.getElementById("group-form").style.display = "flex";
