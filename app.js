@@ -25,17 +25,6 @@ function addBookToLibrary() {
 
 }
 
-function displayBooks() {
-  const books = document.querySelector(".books");
-
-  // myLibrary.forEach(myLibrary => {
-  //   const card = document.createElement("div");
-  //   card.classList.add("card");
-  //   books.appendChild(card);
-
-  //   for (let key in myLibrary) 
-  // })
-}
 
 //On click listener for when the submit button is clicked
 const btnAdd = document.querySelector(".test-submit");
@@ -49,6 +38,8 @@ function submitForm() {
   const readBook = document.getElementById("read_id").value;
 
 
+
+  //textContainer is used to create the top bar for each book title
   const textContainer = document.createElement("span");
   const titleHTML = document.createTextNode("Title: "+bookTitle);
   textContainer.appendChild(titleHTML);
@@ -62,7 +53,7 @@ function submitForm() {
   textContainer.style.margin = 0;
   
 
-
+//Gets author, page, and if they read.
   const authorHTML = document.createTextNode("Author: "+author);
   const pageNumberHTML = document.createTextNode("Pages: "+numberPages);
   const readHTML = document.createTextNode("Read? "+readBook);
@@ -70,15 +61,42 @@ function submitForm() {
   const br = document.createElement("br");
 
 
- 
+  //removeBtn is added to span and span is used to help remove the divs
+  const mySpan = document.createElement("span");
+   const removeButton = document.createElement("button");
+   removeButton.style.width = "20px";
+   removeButton.style.height = "10px";
+   removeButton.style.borderRadius = "8px";
+
+
+   //Event listener used to remove a book
+   removeButton.addEventListener("click", (e) =>{
+    const close = document.querySelectorAll("span");
+    for (let i=0; i<close.length; i++) {
+      close[i].addEventListener("click", ()=> {
+        close[i].parentElement.style.opacity = 0;
+        setTimeout(()=> {
+         close[i].parentElement.style.display = "none";
+         close[i].parentElement.remove();
+        }, 10);
+      })
+    }
+
+   })
+
+
+   //add removeButton to span
+   mySpan.appendChild(removeButton);
+
+
+
   const newDiv = document.createElement("div");
+  newDiv.setAttribute("id", "div1");
   newDiv.classList.add("div-card");
 
+//textContainer contains the title
   newDiv.append(textContainer)
-  // newDiv.appendChild(titleHTML);
-  // newDiv.appendChild(document.createElement("br"));
-  // newDiv.appendChild(document.createElement("br"));
-
+  
 
   newDiv.appendChild(authorHTML);
   newDiv.appendChild(document.createElement("br"));
@@ -93,18 +111,25 @@ function submitForm() {
   newDiv.appendChild(document.createElement("br"));
   newDiv.appendChild(document.createElement("br"));
 
+  newDiv.appendChild(mySpan);
+
+
 
 
   DivContainer.appendChild(newDiv);
   document.getElementById("group-form").style.display = "none";
 
-
-  // document.getElementById("test-title").innerHTML = bookTitle;
-  
-
-
-  // // document.getElementById("books").style.display = "flex";s
 }
+
+function removeThis() {
+ 
+
+  // const eDiv = document.getElementById("div1");
+  // eDiv.parentNode.removeChild(eDiv);
+
+}
+
+
 
 function openForm() {
   document.getElementById("group-form").style.display = "flex";
