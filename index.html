@@ -10,14 +10,16 @@
 <body>
 
   <div class="top-bar">
-    <h1>Online Library</h1>
+    <h1 id="testy">Local Library</h1>
+    <button onClick="openForm();" type="button" class="button">+</button>
   </div>
 
-  <div class="main-content">
+
+
+  <div id="main-content">
 
     <div id="group-form" id="myForm">
-      <form action="#">
-
+      <!-- <form action="#"> -->
         <div class="top-button">
           <button onClick="closeForm();">X</button>
         </div>
@@ -31,24 +33,24 @@
 
         <div class="input-text">
          <label for="title">Title</label>
-         <input class="user-typed" type="text" name="title" placeholder="Book Title" required>
+         <input class="user-typed" type="text" name="title" id="title_id" placeholder="Book Title" required>
         </div>
 
         <div class="input-text">
         <label for="author">Author</label>
-        <input class="user-typed" type="text" name="author" placeholder="Author" required>
+        <input class="user-typed" type="text" name="author" id="author_id"placeholder="Author" required>
         </div>
 
         <div class="input-text">
         <label for="pages">Number of pages:</label>
-        <input class="user-typed" type="number" name="pages" placeholder="Pages" required>
+        <input class="user-typed" type="number" name="pages" id="pages_id" placeholder="Pages" required>
         </div>
 
         <div class="input-text">
         <label for="readTheBook">Read the book?</label>
-          <select class="user-typed" name="readTheBook" id="readTheBook" required>
-          <option value="yes-read">Yes :)</option>
-          <option value="not-read">No :(</option>
+          <select class="user-typed" name="readTheBook" id="read_id" required>
+          <option value="Yes :)">Yes :)</option>
+          <option value="No :(">No :(</option>
            </select>
         </div>
 
@@ -57,11 +59,16 @@
         </div>
 
       </div>
-      </form>
+      <!-- </form> -->
     </div>
 
-    <button onClick="openForm();" type="button" class="button">+</button>
-
+   
+    <!-- <div id="books">
+      <h3 id="test-title">HI</h3>
+      <h3 id="test-author"><br>HI</h3>
+    </div> -->
+   
+ 
   </div>
 
 
