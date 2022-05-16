@@ -49,8 +49,17 @@ function submitForm() {
   const readBook = document.getElementById("read_id").value;
 
 
-
+  const textContainer = document.createElement("span");
   const titleHTML = document.createTextNode("Title: "+bookTitle);
+  textContainer.appendChild(titleHTML);
+  textContainer.style.color = "green";
+  textContainer.style.backgroundColor = "white";
+  textContainer.style.width = "230px";
+  textContainer.style.height = "30px";
+  textContainer.style.margin = 0;
+  
+
+
   const authorHTML = document.createTextNode("Author: "+author);
   const pageNumberHTML = document.createTextNode("Pages: "+numberPages);
   const readHTML = document.createTextNode("Read? "+readBook);
@@ -62,9 +71,10 @@ function submitForm() {
   const newDiv = document.createElement("div");
   newDiv.classList.add("div-card");
 
-  newDiv.appendChild(titleHTML);
-  newDiv.appendChild(document.createElement("br"));
-  newDiv.appendChild(document.createElement("br"));
+  newDiv.append(textContainer)
+  // newDiv.appendChild(titleHTML);
+  // newDiv.appendChild(document.createElement("br"));
+  // newDiv.appendChild(document.createElement("br"));
 
 
   newDiv.appendChild(authorHTML);
