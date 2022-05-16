@@ -45,7 +45,8 @@ function submitForm() {
   textContainer.appendChild(titleHTML);
   textContainer.style.display = "flex";
   textContainer.style.color = "white";
-  textContainer.style.backgroundColor = "black";
+  textContainer.style.backgroundColor = "rgb(0, 160, 213)";
+  // "rgb(115, 189, 250)";
   textContainer.style.width = "230px";
   textContainer.style.height = "auto";
   textContainer.style.alignItems = "center";
@@ -87,7 +88,7 @@ function submitForm() {
    let clicked = false;
    updateButton.onclick = function() {
      if (!clicked) {
-       clicked = true;
+        clicked = true;
         readHTML.textContent = ("Read? Yes :)");
      } else {
        clicked = false;
