@@ -147,6 +147,19 @@ function submitForm() {
   DivContainer.appendChild(newDiv);
   document.getElementById("group-form").style.display = "none";
 
+ 
+
+  //CLEARS form values after submitting it
+  const clear1 = document.getElementById("title_id");
+  clear1.value = " ";
+
+  const clear2 = document.getElementById("author_id");
+  clear2.value = " ";
+
+  const clear3 = document.getElementById("pages_id");
+  clear3.value = " ";
+
+
 }
 
 function removeThis() {
