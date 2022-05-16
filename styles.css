@@ -83,8 +83,8 @@ html, body {
 
 
 #group-form {
-  /* display: none */
-  display: flex;
+  display: none;
+  /* display: flex; */
   position: absolute;
   margin-left: 550px;
   margin-top: 75px;
@@ -160,11 +160,11 @@ html, body {
  .div-card {
    display: grid;
    min-width: 230px;
-   min-height: 340px;
+   min-height: 250px;
    max-width: 230px;
    max-height: 340px;
    width: 230px;
-   height: 340px;
+   height: 250px;
    background-color: coral;
    margin-left: 25px;
    margin-top: 25px;
@@ -172,7 +172,8 @@ html, body {
    color: rgb(249, 249, 249);
    font-size: 22px;
    justify-content: center;
-   color: purple;
+   color: black;
+   font-weight: bold;
 
 
  }

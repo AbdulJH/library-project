@@ -52,10 +52,13 @@ function submitForm() {
   const textContainer = document.createElement("span");
   const titleHTML = document.createTextNode("Title: "+bookTitle);
   textContainer.appendChild(titleHTML);
-  textContainer.style.color = "green";
-  textContainer.style.backgroundColor = "white";
+  textContainer.style.display = "flex";
+  textContainer.style.color = "white";
+  textContainer.style.backgroundColor = "black";
   textContainer.style.width = "230px";
-  textContainer.style.height = "30px";
+  textContainer.style.height = "auto";
+  textContainer.style.alignItems = "center";
+  textContainer.style.justifyContent = "center";
   textContainer.style.margin = 0;
   
 
