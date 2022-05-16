@@ -56,8 +56,7 @@ function submitForm() {
 //Gets author, page, and if they read.
   const authorHTML = document.createTextNode("Author: "+author);
   const pageNumberHTML = document.createTextNode("Pages: "+numberPages);
-  const readHTML = document.createTextNode("Read? "+readBook);
-
+  let readHTML = document.createTextNode("Read? "+readBook); 
   const br = document.createElement("br");
 
 
@@ -70,6 +69,33 @@ function submitForm() {
    removeButton.style.height = "20px";
    removeButton.style.borderRadius = "5px";
    removeButton.style.backgroundColor = "red";
+
+   const updateButton = document.createElement("button");
+   updateButton.style.width = "65px";
+   updateButton.style.height = "20px";
+
+
+   let clicked = false;
+   updateButton.onclick = function() {
+     if (!clicked) {
+       clicked = true;
+        readHTML.textContent = ("Read? Yes :)!");
+     } else {
+       clicked = false;
+       readHTML.textContent = ("Read? No :(!");
+     }
+   }
+
+  //  updateButton.addEventListener("click", (e) => {
+   
+  //    if (readBook ==="Yes :)") {
+  //      readHTML.textContent = ("Read? No :(");
+  //    } 
+  //    if (readBook === "No :(") {
+  //      readHTML.textContent = ("Read? Yes :)");
+  //    }
+  //  })
+
 
 
    //Event listener used to remove a book
@@ -90,6 +116,7 @@ function submitForm() {
 
    //add removeButton to span
    mySpan.appendChild(removeButton);
+   mySpan.appendChild(updateButton);
 
 
 
