@@ -65,39 +65,37 @@ function submitForm() {
    const removeButton = document.createElement("button");
    removeButton.textContent = "Remove!"
    removeButton.style.width = "65px";
-   removeButton.style.marginLeft = "5px";
    removeButton.style.height = "20px";
+   removeButton.style.marginLeft = "40px";
    removeButton.style.borderRadius = "5px";
    removeButton.style.backgroundColor = "red";
 
+
    const updateButton = document.createElement("button");
+   updateButton.textContent = "Update!";
    updateButton.style.width = "65px";
    updateButton.style.height = "20px";
+   updateButton.style.marginLeft = "20px";
+   updateButton.style.borderRadius = "5px";
+   updateButton.style.backgroundColor = "green";
 
 
+
+
+
+   //click listener for update
    let clicked = false;
    updateButton.onclick = function() {
      if (!clicked) {
        clicked = true;
-        readHTML.textContent = ("Read? Yes :)!");
+        readHTML.textContent = ("Read? Yes :)");
      } else {
        clicked = false;
-       readHTML.textContent = ("Read? No :(!");
+       readHTML.textContent = ("Read? No :(");
      }
    }
 
-  //  updateButton.addEventListener("click", (e) => {
-   
-  //    if (readBook ==="Yes :)") {
-  //      readHTML.textContent = ("Read? No :(");
-  //    } 
-  //    if (readBook === "No :(") {
-  //      readHTML.textContent = ("Read? Yes :)");
-  //    }
-  //  })
-
-
-
+ 
    //Event listener used to remove a book
    removeButton.addEventListener("click", (e) =>{
     const close = document.querySelectorAll("span");
