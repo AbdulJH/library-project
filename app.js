@@ -64,9 +64,12 @@ function submitForm() {
   //removeBtn is added to span and span is used to help remove the divs
   const mySpan = document.createElement("span");
    const removeButton = document.createElement("button");
-   removeButton.style.width = "20px";
-   removeButton.style.height = "10px";
-   removeButton.style.borderRadius = "8px";
+   removeButton.textContent = "Remove!"
+   removeButton.style.width = "65px";
+   removeButton.style.marginLeft = "5px";
+   removeButton.style.height = "20px";
+   removeButton.style.borderRadius = "5px";
+   removeButton.style.backgroundColor = "red";
 
 
    //Event listener used to remove a book
